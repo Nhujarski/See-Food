@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        
+        <div class="container" style="background-color: grey;">
+            <h3 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Hello {{ current_user.first_name }}! This is your day at a glance:</h3>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">Breakfast</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer"><a href="food/new">Add Food</a></div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Lunch</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer"><a href="food/new">Add Food</a></div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Dinner</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>
+                <div class="panel-footer"><a href="food/new">Add Food!</a></div>
+            </div>
+            <div>
+                <button class="btn btn-info"><a href="/logout" style= "color: white; text-decoration: none">Logout!</a></button>
+
+            </div>
+    </div>
+    <!-- end container -->
+    </body>
+</html>

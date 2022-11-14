@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Add Food</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <h1 style="text-decoration: underline;">Please make a selection:</h1>
+        <div>
+        <div class="active-cyan-3 active-cyan-4 mb-4" style="width: 500px;">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </div>
+    <div style= "overflow-y: scroll; height:500px; width:500px">
+        <table class="table table-striped table-dark">
+            <thead>
+               <th class="th-sm">Food ID</th>
+               <th class="th-sm">Name</th>
+               <th class="th-sm">Action</th>
+            </thead>
+            <tbody>
+               {% for food in foods %}
+               <tr>
+                   <td>{{ food.id }}</td>
+                   <td>{{ food.name }}</td>
+                   <td><a href="">Add</a></td>
+                   
+               </tr>
+               {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-info"><a href="/dashboard" style="text-decoration: none; color:white">Home</a> </button>
+
+</div>
+    </body>
+</html>
